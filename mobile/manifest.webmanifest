@@ -1,0 +1,27 @@
+{
+  "name": "LearnAlong AI",
+  "short_name": "LearnAlong AI",
+  "description": "手机端 AI 学习轻量入口，解释链接和文本并保存 Markdown。",
+  "start_url": "/mobile/",
+  "scope": "/mobile/",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#1f7a61",
+  "icons": [
+    {
+      "src": "/mobile/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "share_target": {
+    "action": "/mobile/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1f7a61" />
+    <title>LearnAlong AI Mobile</title>
+    <link rel="manifest" href="/mobile/manifest.webmanifest" />
+    <link rel="stylesheet" href="/mobile/mobile.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <div>
+          <div class="eyebrow">LearnAlong AI</div>
+          <h1>LearnAlong AI</h1>
+        </div>
+        <button id="installHint" title="安装提示">安装</button>
+      </header>
+
+      <section class="panel hero">
+        <h2>手机轻量入口</h2>
+        <p>从 X、YouTube、Safari 或任意 App 复制链接/文本到这里，让 LearnAlong AI 解释并保存成 Markdown。</p>
+      </section>
+
+      <section class="panel">
+        <label for="sourceInput">链接或文本</label>
+        <textarea id="sourceInput" rows="8" placeholder="粘贴 X 链接、YouTube 链接、文章片段，或系统分享带来的内容"></textarea>
+        <div class="actions">
+          <button id="pasteButton">粘贴</button>
+          <button id="explainButton" class="primary">解释并保存</button>
+        </div>
+      </section>
+
+      <section class="panel result-panel">
+        <div class="section-head">
+          <h2>学习结果</h2>
+          <div class="small-actions">
+            <button id="copyLatest">复制 Markdown</button>
+            <button id="exportLatest">导出 .md</button>
+          </div>
+        </div>
+        <pre id="result">还没有内容。先粘贴一条链接或文本。</pre>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>本机学习笔记</h2>
+          <div class="small-actions">
+            <button id="copyAll">复制全部</button>
+            <button id="clearAll">清空</button>
+          </div>
+        </div>
+        <div id="notes" class="notes"></div>
+      </section>
+    </main>
+    <script src="/mobile/mobile.js"></script>
+  </body>
+</html>

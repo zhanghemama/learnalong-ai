@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+
+# Local secrets and machine-specific config
+.env
+.env.*
+!.env.example
+
+# Local runtime/debug output
+*.log
+*.tmp

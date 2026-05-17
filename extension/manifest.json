@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "LearnAlong AI",
+  "version": "0.1.0",
+  "description": "Ask questions while learning from webpages, X, and videos, then turn sessions into readable study pages.",
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "offscreen",
+    "scripting",
+    "sidePanel",
+    "storage",
+    "tabCapture",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>", "http://localhost:8787/*", "https://api.openai.com/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open LearnAlong AI"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

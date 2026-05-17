@@ -1,0 +1,14 @@
+{
+  "name": "learnalong-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Voice-first AI learning companion browser extension prototype.",
+  "scripts": {
+    "start": "node server/index.mjs",
+    "validate": "node --check server/index.mjs && node --check extension/background.js && node --check extension/content.js && node --check extension/learning-page.js && node --check extension/offscreen.js && node --check extension/sidepanel.js && node --check extension/voice-permission.js && node --check mobile/mobile.js && node --check mobile/service-worker.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

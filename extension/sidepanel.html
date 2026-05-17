@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LearnAlong AI</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1 id="appTitle">LearnAlong AI</h1>
+          <p class="tagline">帮你看懂，再沉淀</p>
+        </div>
+        <div class="topbar-actions">
+          <label class="language-select" aria-label="文章语言">
+            <select id="learningLanguage" title="文章输出语言">
+              <option value="zh">中文</option>
+              <option value="en">English</option>
+              <option value="bilingual">双语</option>
+            </select>
+          </label>
+          <button id="refreshContext" class="icon-button" title="重新读取当前页面">↻</button>
+        </div>
+      </header>
+
+      <section class="page-strip" aria-live="polite">
+        <div class="label">正在看</div>
+        <div id="pageTitle" class="page-title">还没有读取页面</div>
+        <div id="pageMeta" class="page-meta">打开网页后点刷新</div>
+      </section>
+
+      <section id="quickActions" class="actions" aria-label="快速学习动作"></section>
+
+      <section class="voice-panel">
+        <div>
+          <div class="label">语音问</div>
+          <p id="voiceStatus">按住说话，松开发送。也可以按住空格键。</p>
+        </div>
+        <div class="voice-actions">
+          <button id="voicePermission">设置麦克风</button>
+          <button id="voiceToggle" class="primary">按住问</button>
+        </div>
+      </section>
+
+      <section id="messages" class="messages" aria-live="polite"></section>
+
+    </main>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
